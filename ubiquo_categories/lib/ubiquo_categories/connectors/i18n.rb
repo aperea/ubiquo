@@ -15,7 +15,7 @@ module UbiquoCategories
         def self.included(klass)
           klass.send(:extend, ClassMethods)
           klass.send(:translatable, :name, :description)
-#          klass.send(:attr_accessible, :content_id, :locale)
+          klass.send(:attr_accessible, :content_id, :locale)
           I18n.register_uhooks klass, ClassMethods
         end
 

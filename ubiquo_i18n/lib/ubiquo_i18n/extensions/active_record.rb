@@ -159,6 +159,10 @@ module UbiquoI18n
             self.send(clonable_attributes).each_pair do |attr, value|
               new_translation.send("#{attr}=", value)
             end
+            
+            unless new_translation.translations.empty?
+              new_translation.copy_translatable_shared_relations_from new_translation.translations.first
+            end
 
             new_translation
           end
