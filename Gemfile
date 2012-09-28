@@ -16,3 +16,5 @@ group :development, :test do
   gem "mysql2", "~> 0.3"
   gem "mocha", "~> 0.10"
 end
+
+gem 'calendar_date_select', :git => 'git://github.com/gnuine/calendar_date_select'
